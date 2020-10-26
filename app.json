@@ -1,0 +1,12 @@
+{
+  "name": "SoloIdeal",
+  "displayName": "Solo Ideal",
+  "expo": {
+    "name": "SoloIdeal",
+    "slug": "SoloIdeal",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
