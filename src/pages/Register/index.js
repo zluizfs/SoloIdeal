@@ -3,19 +3,13 @@ import { KeyboardAvoidingView, View, Text, StyleSheet, Image, TextInput} from 'r
 
 import StatusBarColor from '../../components/StatusBar';
 import Button from '../../components/Button';
-import indexStyles from '../Styles/indexStyles';
+import indexStyles from '../styles/indexStyles';
 
 function Register({ navigation }) {
     return (
     <KeyboardAvoidingView style={indexStyles.container} enableOnAndroid extraScrollHeight={200}>
       <StatusBarColor/>
-      <View style={indexStyles.header}>
-        <Image
-        source={require('../../assets/logoWhite.png')}
-        style={indexStyles.logo}
-        />
-      </View>
-      <View style={indexStyles.footer}>
+      <View style={styles.footer}>
         <Text style={styles.infoText}>Digite os dados abaixo para efetuar o cadastro.</Text>
         <TextInput
           style={indexStyles.input}
@@ -42,7 +36,18 @@ function Register({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+
+  footer: {
+    backgroundColor: '#FFF',
+    flex: 1,
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    padding: 20,
+    alignItems: 'center',
+  },
+
 	infoText: {
+    marginTop: "12%",
 		marginBottom: 10,
 	},
 	buttonBox: {

@@ -19,7 +19,7 @@ const indexStyles = StyleSheet.create({
 
     footer: {
       backgroundColor: '#FFF',
-      flex: 2,
+      flex: 1,
       
       padding: 20,
       borderTopLeftRadius: 20,

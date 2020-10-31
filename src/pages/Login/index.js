@@ -3,7 +3,7 @@ import { KeyboardAvoidingView, View, Text, StyleSheet, Image, TextInput } from '
 
 import StatusBarColor from '../../components/StatusBar';
 import Button from '../../components/Button';
-import indexStyles from '../Styles/indexStyles';
+import indexStyles from '../styles/indexStyles';
 
 function Login({ navigation }) {
     return (

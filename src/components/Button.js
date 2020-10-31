@@ -20,9 +20,9 @@ const styles = StyleSheet.create({
 
       backgroundColor: '#5AA861',
 
-      borderWidth: 0.5,
+      borderWidth: 0.2,
       borderRadius: 50,
-
+      
       alignItems: 'center',
       justifyContent: 'center',
     },
