@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/Feather';
 
 import Home from '../pages/Home';
 import UserAccont from '../pages/UserAccont';
+import Settings from '../pages/Settings';
 
 const AuthTab = createBottomTabNavigator();
 
@@ -22,9 +23,11 @@ const LoginStyles = {
 
 const AppRoutes = () => (
   <AuthTab.Navigator
+  shifiing={true}
   tabBarOptions={{
     activeTintColor: '#5AA861',
     showLabel: false,
+    swipeEnabled: true,
   }}
   >
     <AuthTab.Screen 
@@ -46,8 +49,8 @@ const AppRoutes = () => (
       }}
     />
     <AuthTab.Screen 
-      name="Config" 
-      component={Home} 
+      name="Settings" 
+      component={Settings} 
       options={{ 
         tabBarIcon: ({color}) => (
           <Icon name="settings" color={color} size={24} />

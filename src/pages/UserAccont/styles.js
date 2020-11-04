@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
   header: {
     flex: 1,
     alignItems: 'center',
+    justifyContent: 'center'
   },
 
   footer: {
@@ -24,7 +25,6 @@ const styles = StyleSheet.create({
     borderColor: '#FFF',
     borderWidth: 3,
     overflow: 'hidden',
-    marginVertical: 2
   },
 
   imageSize: {
@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
   },
 
   buttonContainer: {
+    alignSelf: 'center',
     marginVertical: 30,
   }
 
