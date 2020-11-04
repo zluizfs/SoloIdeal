@@ -1,13 +1,23 @@
 import React from 'react';
-import { View, KeyboardAvoidingView } from 'react-native';
+import { View, KeyboardAvoidingView, Text, Button } from 'react-native';
 
 import StatusBarColor from '../../components/StatusBar';
 
-function Home({ navigation }) {
+import { useAuth } from '../../contexts/auth'
+
+const Home = () => {
+    const {user, signOut} = useAuth();
+    
+    function handleSignOut(){
+      signOut();
+    }
+
     return (
-      <KeyboardAvoidingView>
-        <StatusBarColor/>
-      </KeyboardAvoidingView>
+    <KeyboardAvoidingView>
+      <StatusBarColor/>
+      <View><Text>{user?.name}</Text></View>
+      <Button title="Sair" onPress={handleSignOut}/>
+    </KeyboardAvoidingView>
     );
   }
 

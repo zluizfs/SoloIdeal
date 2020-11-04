@@ -3,14 +3,13 @@ import { Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 
 const Button = ({ onPress, title, backgroundColor, color }) => (
-    <TouchableOpacity
-      activeOpacity={0.5}
-      onPress= {onPress}
-      style={[ styles.button, backgroundColor && { backgroundColor }]}
-    >
-      <Text style={styles.buttonText, color && { color }}>{title}</Text>
-    </TouchableOpacity>
-  
+  <TouchableOpacity
+    activeOpacity={0.5}
+    onPress= {onPress}
+    style={[ styles.button, backgroundColor && { backgroundColor }]}
+  >
+    <Text style={styles.buttonText, color && { color }}>{title}</Text>
+  </TouchableOpacity>
 );
 
 const styles = StyleSheet.create({
