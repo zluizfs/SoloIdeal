@@ -1,5 +1,5 @@
 import React from 'react';
-import { KeyboardAvoidingView, View, Text,  Image, TextInput } from 'react-native';
+import { KeyboardAvoidingView, SafeAreaView, ScrollView, View, Text,  Image, TextInput } from 'react-native';
 import { useAuth } from '../../contexts/auth';
 
 import StatusBarColor from '../../components/StatusBar';
@@ -7,9 +7,7 @@ import Button from '../../components/Button';
 import styles from './styles';
 
 const SignIn = ({ navigation }) => {
-    const { signed, signIn } = useAuth();
-
-    console.log(signed)
+    const { signIn } = useAuth();
 
     function handleSignIn(){
       signIn();

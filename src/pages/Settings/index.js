@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button} from 'react-native';
 
 import StatusBarColor from '../../components/StatusBar';
+import styles from './styles';
 
 import { useAuth } from '../../contexts/auth'
 
@@ -13,10 +14,9 @@ const Settings = () => {
     }
 
     return (
-      <View>
+      <View styles={styles.container}>
         <StatusBarColor/>
-        <Text>Config</Text>
-        <Button title="Sair" onPress={handleSignOut}/>
+          <Button onPress={handleSignOut} title="Sair"/>
       </View>
     );
   }

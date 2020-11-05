@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#5AA861', 
-    flex: 1,
+    flex: 1
   },
 
   header: {
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   footer: {
     backgroundColor: '#FFF',
     flex: 1,
-    padding: 20,
+    padding: 20
   },
 
   imageContainer: {
@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
     height: 200,
     borderRadius: 100,
     borderColor: '#FFF',
-    borderWidth: 3,
-    overflow: 'hidden',
+    borderWidth: 4,
+    overflow: 'hidden'
   },
 
   imageSize: {
@@ -41,20 +41,20 @@ const styles = StyleSheet.create({
   jobTitle: {
     fontSize: 20,
     marginVertical: 2,
-    color: '#FFF',
+    color: '#FFF'
   },
 
   infoTitle: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: "700",
-    color: '#5AA861',
+    color: '#5AA861'
 
   },
 
   infoSubTitle: {
     fontSize: 18,
     fontWeight: "600",
-    color: "#000",
+    color: "#000"
   },
 
   content: {
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
 
   buttonContainer: {
     alignSelf: 'center',
-    marginVertical: 30,
+    marginVertical: 30
   }
 
 });

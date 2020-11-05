@@ -1,23 +1,14 @@
 import React from 'react';
-import { View, KeyboardAvoidingView, Text, Button } from 'react-native';
+import { View, Text} from 'react-native';
 
 import StatusBarColor from '../../components/StatusBar';
 
-import { useAuth } from '../../contexts/auth'
-
 const Home = () => {
-    const {user, signOut} = useAuth();
-    
-    function handleSignOut(){
-      signOut();
-    }
-
     return (
-    <KeyboardAvoidingView>
-      <StatusBarColor/>
-      <View><Text>{user?.name}</Text></View>
-      <Button title="Sair" onPress={handleSignOut}/>
-    </KeyboardAvoidingView>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <StatusBarColor/>
+        <Text>Home - Será exibido as análises de solo aqui.</Text>
+      </View>
     );
   }
 
