@@ -1,14 +1,26 @@
 import React from 'react';
-import { View, Text} from 'react-native';
+import { View, Text } from 'react-native';
+import { Appbar } from 'react-native-paper';
 
 import StatusBarColor from '../../components/StatusBar';
 
+const Header = () => (
+  <Appbar.Header
+    statusBarHeight={1}
+    theme={{ colors: { primary: '#5AA861', underlineColor:'transparent'}}}
+    dark
+    >
+    <Appbar.Content title="Análises" /> 
+    <Appbar.Action icon="plus" style={{}} />
+  </Appbar.Header>
+)
+
 const Home = () => {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <StatusBarColor/>
-        <Text>Home - Será exibido as análises de solo aqui.</Text>
-      </View>
+       <View>
+         <Header/>
+         <StatusBarColor/>
+       </View>
     );
   }
 

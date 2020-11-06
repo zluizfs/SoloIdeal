@@ -17,14 +17,12 @@ const styles = StyleSheet.create({
 
   input: {
     width: 350,
-    height: 50,
-    padding: 10,
+    height: 55,
     marginBottom: 15,
     
     backgroundColor: '#FFF',
-    borderColor: '#000',
 
-    borderBottomWidth: 0.5,
+    fontSize: 15
   },
 
   infoText: {
@@ -33,7 +31,7 @@ const styles = StyleSheet.create({
   },
   
 	buttonBox: {
-			marginTop: 30,
+			marginTop: 20,
 	}
 
 });

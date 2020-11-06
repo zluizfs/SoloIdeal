@@ -29,7 +29,7 @@ const AppRoutes = () => (
     showLabel: false,
     swipeEnabled: true,
   }}
-  >
+  > 
     <AuthTab.Screen 
       name="Home" 
       component={Home} 

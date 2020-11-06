@@ -33,23 +33,25 @@ const styles = StyleSheet.create({
     height: responsiveHeight(50),
     resizeMode: ('contain'),
   },
+  
+  inputBox: {
+    marginTop: 20,
+  },
 
   input: {
     width: 350,
-    height: 50,
-    padding: 10,
+    height: 55,
     marginBottom: 15,
     
     backgroundColor: '#FFF',
-    borderColor: '#000',
 
-    borderBottomWidth: 0.5,
+    fontSize: 15
   },
 
   buttonBox: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 30,
+    marginTop: 20,
   },
 
   registerText: {

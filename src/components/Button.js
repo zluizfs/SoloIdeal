@@ -15,12 +15,21 @@ const Button = ({ onPress, title, backgroundColor, color }) => (
 const styles = StyleSheet.create({
     button: {
       width: 350,
-      height: 50,
+      height: 45,
 
       backgroundColor: '#5AA861',
 
-      borderWidth: 0.2,
-      borderRadius: 50,
+      shadowColor: "#000",
+      shadowOffset: {
+        width: 0,
+        height: 1,
+      },
+      shadowOpacity: 0.20,
+      shadowRadius: 1.41,
+      
+      elevation: 1,
+
+      borderRadius: 15,
       
       alignItems: 'center',
       justifyContent: 'center',

@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, Button} from 'react-native';
+import { View } from 'react-native';
+import { List } from 'react-native-paper';
 
 import StatusBarColor from '../../components/StatusBar';
 import styles from './styles';
@@ -16,7 +17,12 @@ const Settings = () => {
     return (
       <View styles={styles.container}>
         <StatusBarColor/>
-          <Button onPress={handleSignOut} title="Sair"/>
+        <List.Item
+          title="Sair"
+          description="Fazer logout da conta"
+          left={props => <List.Icon {...props} icon="logout" color="#cf3030"/>}
+          onPress={handleSignOut}
+        />
       </View>
     );
   }
