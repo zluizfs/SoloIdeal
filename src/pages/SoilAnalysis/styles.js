@@ -14,8 +14,6 @@ const styles = StyleSheet.create({
   footer: {
     backgroundColor: '#FFF',
     flex: 1,
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
     padding: 20,
     alignItems: 'center',
   },
@@ -30,11 +28,6 @@ const styles = StyleSheet.create({
     fontSize: 15
   },
 
-  infoText: {
-    marginTop: 30,
-		marginBottom: 10,
-  },
-  
 	buttonBox: {
       marginTop: 20,
       marginBottom: 10,

@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
       
       elevation: 1,
 
-      borderRadius: 15,
+      borderRadius: 20,
       
       alignItems: 'center',
       justifyContent: 'center',
@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
   
     buttonText: {
         color: '#FFF',
+        fontWeight: '700',
         fontSize: 18,
     },
 });

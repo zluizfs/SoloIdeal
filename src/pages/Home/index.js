@@ -4,22 +4,29 @@ import { Appbar } from 'react-native-paper';
 
 import StatusBarColor from '../../components/StatusBar';
 
-const Header = () => (
+const Header = ({ navigation }) => (
   <Appbar.Header
     statusBarHeight={1}
     theme={{ colors: { primary: '#5AA861', underlineColor:'transparent'}}}
     dark
     >
     <Appbar.Content title="Análises" /> 
-    <Appbar.Action icon="plus" style={{}} />
+    <Appbar.Action icon="plus" onPress={() => navigation.navigate('SoilAnalysis')}/>
   </Appbar.Header>
 )
 
-const Home = () => {
+const Home = ({ navigation }) => {
     return (
        <View>
-         <Header/>
          <StatusBarColor/>
+         <Appbar.Header
+            statusBarHeight={1}
+            theme={{ colors: { primary: '#5AA861', underlineColor:'transparent'}}}
+            dark
+            >
+            <Appbar.Content title="Análises" /> 
+            <Appbar.Action icon="plus" onPress={() => navigation.navigate('SoilAnalysis')}/>
+          </Appbar.Header>
        </View>
     );
   }
