@@ -11,18 +11,23 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF', 
   },
 
-  footer: {
+  card: {
     backgroundColor: '#FFF',
-    flex: 1,
-    padding: 20,
-    alignItems: 'center',
+
+    padding: 10,
+    margin: 15,
+    borderRadius: 20,
+  },
+
+  title: {
+    alignSelf: 'center',
+    justifyContent: 'center'
   },
 
   input: {
     width: 350,
     height: 55,
     marginBottom: 15,
-    
     backgroundColor: '#FFF',
 
     fontSize: 15
@@ -31,8 +36,8 @@ const styles = StyleSheet.create({
 	buttonBox: {
       marginTop: 20,
       marginBottom: 10,
-	}
-
+  }
+  
 });
 
 export default styles;
