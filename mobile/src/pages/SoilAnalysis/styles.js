@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: '#FFF',
     padding: 20,
-    margin: 15,
+    margin: 20,
     borderRadius: 20,
   },
 
@@ -32,9 +32,24 @@ const styles = StyleSheet.create({
     fontSize: 15
   },
 
+  switch: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingTop: 10,
+    paddingHorizontal: 15,
+    width: '100%',
+  },
+
+  switchSub: {
+    fontSize: 18,
+    paddingLeft: 7,
+  },
+
 	buttonBox: {
       marginTop: 20,
       marginBottom: 10,
+      alignItems: 'center',
   }
   
 });

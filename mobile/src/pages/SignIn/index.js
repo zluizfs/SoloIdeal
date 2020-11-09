@@ -8,6 +8,10 @@ import StatusBarColor from '../../components/StatusBar';
 import Button from '../../components/Button';
 import styles from './styles';
 
+const colors  = {
+  colors: { primary: '#5AA861', underlineColor:'transparent' }
+}
+
 const SignIn = ({ navigation }) => {
 
     const { signIn } = useAuth();
@@ -31,13 +35,13 @@ const SignIn = ({ navigation }) => {
                 label="Usuário"
                 mode="flat"
                 style={styles.input}
-                theme={{ colors: { primary: '#5AA861', underlineColor:'transparent'}}}
+                theme={colors}
               />
               <TextInput
                 label="Senha"
                 mode="flat"
                 style={styles.input}
-                theme={{ colors: { primary: '#5AA861', underlineColor:'transparent'}}}
+                theme={colors}
                 secureTextEntry={true}
                 autoCapitalize="none"
               />

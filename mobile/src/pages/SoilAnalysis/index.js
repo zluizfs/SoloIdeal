@@ -31,6 +31,14 @@ const SoilAnalysis = () => {
           />
         </Card>
 
+        <View style={styles.switch}>
+          <Text style={styles.switchSub}>Incluir Micronutrientes?</Text>
+          <Switch 
+            value={isSwitchOn} 
+            onValueChange={onToggleSwitch}
+          />
+        </View>
+
         <Card style={styles.card}>
 
           <Title style={styles.title}>pH</Title>
@@ -81,55 +89,60 @@ const SoilAnalysis = () => {
 
         </Card>
 
-        <Card style={styles.card}>
+        {isSwitchOn ? ( <Micronutrientes/> ) : null }
 
-          <Title style={styles.title}>Micronutrientes</Title>
-          <TextInput
-            label="Boro"
-            mode="flat"
-            style={styles.input}
-            theme={colors}
-          />
-          <TextInput
-            label="Cobre"
-            mode="flat"
-            style={styles.input}
-            theme={colors}
-          />
-          <TextInput
-            label="Cloro"
-            mode="flat"
-            style={styles.input}
-            theme={colors}
-          />
-          <TextInput
-            label="Ferro"
-            mode="flat"
-            style={styles.input}
-            theme={colors}
-          />
-           <TextInput
-            label="Molibdênio"
-            mode="flat"
-            style={styles.input}
-            theme={colors}
-          />
-           <TextInput
-            label="Zinco"
-            mode="flat"
-            style={styles.input}
-            theme={colors}
-          />
-
-        </Card>
-
-        <Switch value={isSwitchOn} onValueChange={onToggleSwitch} />
-          <View style={styles.buttonBox}>
-            <Button title="Fazer análise" color= "#FFF"/>
-          </View>
+        <View style={styles.buttonBox}>
+          <Button title="Fazer análise" color= "#FFF"/>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
+}
+
+const Micronutrientes = () => {
+  return(
+    <Card style={styles.card} >
+
+      <Title style={styles.title}>Micronutrientes</Title>
+      <TextInput
+        label="Boro"
+        mode="flat"
+        style={styles.input}
+        theme={colors}
+      />
+      <TextInput
+        label="Cobre"
+        mode="flat"
+        style={styles.input}
+        theme={colors}
+      />
+      <TextInput
+        label="Cloro"
+        mode="flat"
+        style={styles.input}
+        theme={colors}
+      />
+      <TextInput
+        label="Ferro"
+        mode="flat"
+        style={styles.input}
+        theme={colors}
+      />
+      <TextInput
+        label="Molibdênio"
+        mode="flat"
+        style={styles.input}
+        theme={colors}
+      />
+      <TextInput
+        label="Zinco"
+        mode="flat"
+        style={styles.input}
+        theme={colors}
+      />
+
+  </Card>
+  )
 }
 
 
