@@ -1,14 +1,18 @@
-var Sequelize = require('sequelize');
+const Sequelize = require('sequelize');
+const dbConfig = require('../config/database');
 
-var sequelize = new Sequelize('soloideal', 'root', 'root', {
-  host: "localhost",
-  dialect: 'mysql'
+const User = require('../models/User');
+const SoilTest = require('../models/SoilTest');
+const Macronutrients = require('../models/Macronutrients');
 
-})
+const connection = new Sequelize(dbConfig);
 
-sequelize.authenticate().then(function(){
-  console.log("Conectado com sucesso!")
-}).catch(function(err){
-  console.log("Falha ao se conectar: " +err)
-})
+User.init(connection);
+// SoilTest.init(connection);
+// Macronutrients.init(connection);
 
+// User.associate(connection.models);
+// SoilTest.associate(connection.models);
+// Macronutrients.associate(connection.models);
+
+module.exports = connection;
