@@ -4,11 +4,10 @@ const bcrypt = require('bcrypt');
 class User extends Model {
   static init(sequelize) {
     super.init({
-      frist_name: {
+      nome: {
         type: DataTypes.STRING,
         allowNull: false
       },
-      last_name:  DataTypes.STRING,
       email: {
         type: DataTypes.STRING,
         lowercase: true,
@@ -21,11 +20,7 @@ class User extends Model {
           msg: 'E-mail cadastrado.'
         }
       },
-      password: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
-      activity: {
+      senha: {
         type: DataTypes.STRING,
         allowNull: false
       },
@@ -33,21 +28,20 @@ class User extends Model {
       hooks: {
         beforeCreate: (user) => {
           const salt = bcrypt.genSaltSync();
-          user.password = bcrypt.hashSync(user.password, salt);
+          user.senha = bcrypt.hashSync(user.senha, salt);
         }
       },
       instanceMethods: {
-        validPassword: function(password) {
-          return bcrypt.compareSync(password, this.password);
+        validPassword: function(senha) {
+          return bcrypt.compareSync(senha, this.senha);
         }
       },    
       sequelize,
-      modelName: 'users'
     })
   }
 
   static associate(models) {
-    this.hasMany(models.SoilTest, { foreignKey: 'user_id', as: 'Soil_Tests'})
+    this.hasMany(models.Local, { foreignKey: 'user_id', as: 'locals'});
   }
 }
 

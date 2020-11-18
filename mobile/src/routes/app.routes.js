@@ -4,10 +4,16 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Icon from 'react-native-vector-icons/Feather';
 
-import Home from '../pages/Home';
+import Locations from '../pages/Locations';
+import LocationsDetails from '../pages/LocationsDetails';
+import CreateLocations from '../pages/CreateLocations';
+import AgriculturePlotsDetails from '../pages/AgriculturePlotsDetails'
+import CreateAgriculturePlots from '../pages/CreateAgriculturePlots';
+import CreateSoilAnalysis from '../pages/CreateSoilAnalysis';
+import SoilAnalysisDetails from '../pages/SoilAnalysisDetails';
 import UserAccont from '../pages/UserAccont';
 import Settings from '../pages/Settings';
-import SoilAnalysis from '../pages/SoilAnalysis';
+
 
 const AuthTab = createBottomTabNavigator();
 const AuthStack = createStackNavigator();
@@ -24,7 +30,7 @@ const TabConfig = {
 
 const AppRoutes = () => (
   <AuthTab.Navigator shifiing={true} tabBarOptions={TabConfig}> 
-    <AuthTab.Screen name="Home"
+    <AuthTab.Screen name="Locations"
       options={{ 
         tabBarIcon: ({color}) => (
           <Icon name="home" color={color} size={24} />
@@ -34,24 +40,90 @@ const AppRoutes = () => (
     {() => (
       <AuthStack.Navigator screenOptions={GestureConfig}>
         <AuthStack.Screen 
-          name="Home" 
-          component={Home}
+          name="Locations" 
+          component={Locations}
           options={{ 
             title: '',
             headerShown: false
           }}
         />
         <AuthStack.Screen 
-          name="SoilAnalysis" 
-          component={SoilAnalysis} 
+          name="CreateLocations" 
+          component={CreateLocations}
           options={{ 
-            title: 'Análise de solo',
+            title: 'Cadastro de propriedade',
             headerTintColor: '#FFF',
             headerStyle: {
               backgroundColor: '#5AA861',
               borderBottomColor: '#FFF',
             },
+          }}
+        />
+        <AuthStack.Screen 
+          name="LocationsDetails" 
+          component={LocationsDetails}
+          options={{ 
+            title: '',
+            headerTintColor: '#FFF',
+            headerStyle: {
+              backgroundColor: '#5AA861',
+              borderBottomColor: '#FFF',
+              elevation: 0,
+              shadowOpacity: 0,
+            },
+          }}
+        />
+         <AuthStack.Screen 
+          name="AgriculturePlotsDetails" 
+          component={AgriculturePlotsDetails}
+          options={{ 
+            title: '',
+            headerTintColor: '#FFF',
+            headerStyle: {
+              backgroundColor: '#5AA861',
+              borderBottomColor: '#FFF',
+              elevation: 0,
+              shadowOpacity: 0,
+            },
+          }}
+        />
+        <AuthStack.Screen 
+          name="CreateAgriculturePlots" 
+          component={CreateAgriculturePlots}
+          options={{ 
+            title: 'Cadastro de talhão',
+            headerTintColor: '#FFF',
+            headerStyle: {
+              backgroundColor: '#5AA861',
+              borderBottomColor: '#FFF',
+            },
+          }}
+        />
+        <AuthStack.Screen 
+          name="SoilAnalysisDetails" 
+          component={SoilAnalysisDetails} 
+          options={{ 
+            title: '',
+            headerTintColor: '#FFF',
+            headerStyle: {
+              backgroundColor: '#5AA861',
+              borderBottomColor: '#FFF',
+              elevation: 0,
+              shadowOpacity: 0,
+            },
         }}
+        />
+        <AuthStack.Screen 
+          name="CreateSoilAnalysis" 
+          component={CreateSoilAnalysis}
+          options={{ 
+            title: 'Nova análise',
+            headerTintColor: '#FFF',
+            headerStyle: {
+              backgroundColor: '#5AA861',
+              borderBottomColor: '#FFF',
+            },
+          }}
         />
       </AuthStack.Navigator>
     )}
@@ -75,7 +147,6 @@ const AppRoutes = () => (
       }}
     />
   </AuthTab.Navigator>
-  
 )
 
 export default AppRoutes;
